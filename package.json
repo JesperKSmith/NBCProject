@@ -1,0 +1,20 @@
+{
+  "name": "news-js",
+  "version": "1.0.0",
+  "description": "website containing news articles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.7",
+    "bootstrap": "^3.3.6",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-watch": "^4.3.8",
+    "jquery": "^2.2.4"
+  }
+}

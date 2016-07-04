@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nordic Barista Cup</title>
+    <link rel="stylesheet" href="src/css/mainTheme.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:300' rel='stylesheet' type='text/css'>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+      angular.module("newsJS", []);
+    </script>
+    <script src="Controllers/mainController.js"></script>
+</head>
+<body ng-app="newsJS" ng-controller="mainCtrl" class="BGC1">
+<div class="pageWrapper">
+<header>
+    <!-- Search menu -->
+    <div class="row">
+        <div class="search--menu">
+            <div id="searchId">
+                <input type="search" class="search--menu" placeholder="Search..."
+                       onfocus="this.placeholder = ''"
+                       onblur="this.placeholder = 'Search...'">
+            </div>
+        </div>
+    </div>
+        <!-- Logo -->
+        <a href="#" class="logo"></a>
+            <!-- Navigation menu -->
+            <!--<nav class="navbar navbar-inverse">-->
+                <!--<div class="container-fluid">-->
+                    <!--<div class="navbar-header">-->
+                        <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">-->
+                            <!--<span class="icon-bar"></span>-->
+                            <!--<span class="icon-bar"></span>-->
+                            <!--<span class="icon-bar"></span>-->
+                            <!--<span class="icon-bar"></span>-->
+                            <!--<span class="icon-bar"></span>-->
+                            <!--<span class="icon-bar"></span>-->
+                        <!--</button>-->
+                        <!--<a href="#" class="logo"></a>-->
+                    <!--</div>-->
+                    <!--<div class="collapse navbar-collapse" id="myNavbar">-->
+                        <!--<ul class="nav navbar-nav">-->
+                            <!--<li class="active"><a href="#">ABOUT NBC</a></li>-->
+                            <!--<li><a href="#">2011 EVENT</a></li>-->
+                            <!--<li><a href="#">NORDIC ROASTER</a></li>-->
+                            <!--<li><a href="#">RESULTS</a></li>-->
+                            <!--<li><a href="#">LINKS</a></li>-->
+                            <!--<li><a href="#">CONTACT</a></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</nav>-->
+                <div class="BGC2">
+                    <nav class="nav--menu">
+                        <ul>
+                            <li><a href="#">ABOUT NBC</a></li>
+                            <li><a href="#">2011 EVENT</a></li>
+                            <li><a href="#">NORDIC ROASTER</a></li>
+                            <li><a href="#">RESULTS</a></li>
+                            <li><a href="#">LINKS</a></li>
+                            <li><a href="#">CONTACT</a></li>
+                        </ul>
+                    </nav>
+                </div>
+</header>
+
+    <!-- Body of page -->
+        <!-- top image -->
+<div class="main--pic col-xs-12"></div>
+<div class="quote--bar">
+    <div class="quote">
+    "To create an environment in which knowledge
+    about coffee and its sphere can be obtained"
+    </div>
+
+    <nav class="socialImageContainer">
+        <ul>
+            <li><a href="#" class="logos twitterLogo"></a></li>
+            <li><a href="#" class="logos instagramLogo"></a></li>
+            <li><a href="#" class="logos facebookLogo"></a></li>
+            <li><a href="#" class="logos tumblrLogo"></a></li>
+            <li><a href="#" class="logos linkedInLogo"></a></li>
+        </ul>
+    </nav>
+</div>
+    <!-- Main Content Articles -->
+    <div class="mainArticles">
+        <div class="article">
+            <img src="{{articleArray[0].imagePath}}">
+            <div class="articleText">
+                <div class="articleHeadLine">
+                    {{articleArray[0].headLine}}
+                </div>
+                <div class="articleDate">
+                    {{articleArray[0].date}}
+                </div>
+                <div class="articleContent">
+                    {{articleArray[0].content}}
+                </div>
+                <button type="button" class="btn btn-info btn-sm">Read more</button>
+            </div>
+        </div>
+        <hr>
+        <div class="article">
+            <img src="{{articleArray[1].imagePath}}">
+            <div class="articleText">
+                <div class="articleHeadLine">
+                    {{articleArray[1].headLine}}
+                </div>
+                <div class="articleDate">
+                    {{articleArray[1].date}}
+                </div>
+                <div class="articleContent">
+                    {{articleArray[1].content}}
+                </div>
+                <button type="button" class="btn btn-info btn-sm">Read more</button>
+            </div>
+        </div>
+        <hr>
+        <div class="article">
+            <img src="{{articleArray[2].imagePath}}">
+            <div class="articleText">
+                <div class="articleHeadLine">
+                    {{articleArray[2].headLine}}
+                </div>
+                <div class="articleDate">
+                    {{articleArray[2].date}}
+                </div>
+                <div class="articleContent">
+                    {{articleArray[2].content}}
+                </div>
+                <button type="button" class="btn btn-info btn-sm">Read more</button>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <!-- Quick Menu Content -->
+    <div class="quickMenu" ng-repeat="quickMenuElement in quickMenuArray">
+        <div class="qmHeadLine">
+            {{quickMenuElement.headLine}}
+        </div>
+        <div class="qmContent">
+            {{quickMenuElement.content}}
+        </div>
+        <div class="qmLink">
+            <a href="#">{{quickMenuElement.link}}</a>
+        </div>
+    </div>
+    <div class="quickMenu" ng-repeat="scoreboard in scoreboard">
+        <div class="qmHeadLine">
+            {{scoreboard.headLine}}
+        </div>
+        <div class="qmContent">
+            {{scoreboard.content}} <br />
+            {{scoreboard.line1}} <br />
+            {{scoreboard.line2}} <br />
+            {{scoreboard.line3}} <br />
+            {{scoreboard.line4}} <br />
+            {{scoreboard.line5}} <br />
+            {{scoreboard.line6}} <br />
+            <div class="finalEntry">
+                {{scoreboard.line7}} <br />
+            </div>
+            <div class="finalSpace">
+            </div>
+        </div>
+    </div>
+    <!--<div class="paginationDiv">-->
+        <!--<ul class="pagination">-->
+            <!--<li><a href="#">Page 1 of 3</a></li>-->
+            <!--<li><a href="#" class="active">1</a></li>-->
+            <!--<li><a href="#">2</a></li>-->
+            <!--<li><a href="#">3</a></li>-->
+            <!--<li><a href="#">>></a></li>-->
+        <!--</ul>-->
+    <!--</div>-->
+
+
+    <!-- Bottom Menu -->
+    <!--<div class="bottomInfo">-->
+        <!--<div class="aboutNBC" ng-repeat="about in about">-->
+            <!--<div class="aboutHL">-->
+                <!--{{about.headLine}}-->
+            <!--</div>-->
+            <!--<div class="aboutSubHL">-->
+                <!--{{about.subHeader}}-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="flickrStream">-->
+            <!--flickr-->
+        <!--</div>-->
+        <!--<div class="contact">-->
+            <!--contact-->
+        <!--</div>-->
+    <!--</div>-->
+           <!--<div  class="BGC3">-->
+           <!--<table>-->
+                <!--<thead>-->
+                    <!--<tr>-->
+                        <!--<th>ID</th>-->
+                        <!--<th>Data content</th>-->
+                    <!--</tr>-->
+                <!--</thead>-->
+                <!--<tbody ng-repeat="x in localArray">-->
+                    <!--<tr>-->
+                        <!--<td>-->
+                        <!--{{x.dataId }}-->
+                        <!--</td>-->
+                        <!--<td>-->
+                            <!--{{x.data}}-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                <!--</tbody>-->
+            <!--</table>-->
+           <!--</div>-->
+</div>
+
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>
